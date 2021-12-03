@@ -1,11 +1,11 @@
 import classes from "./card.module.css";
 import Link from "next/link";
 function Card(props) {
-  const { title, image } = props.item;
+  const { title, image, color } = props.item;
   return (
     <Link href={`/${title}`}>
       <a>
-        <div className={classes.card}>
+        <div className={classes.card} style={{backgroundColor: color}}>
           <h1>{title}</h1>
         </div>
       </a>
