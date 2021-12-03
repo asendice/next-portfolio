@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans&family=Roboto+Mono:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+  --background: #646669;
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  background-color: var(--background);
 }
 
 a {
@@ -11,6 +16,7 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+li {
+  list-style: none;
 }
+
