@@ -1,0 +1,25 @@
+.container {
+  align-self: flex-start;
+  margin-top: 61px;
+  margin-left: 4.5%;
+  position: absolute;
+  min-height: 85px;
+  width: 60%;
+  background-color: var(--card-backround);
+  border: solid 1px var(--background);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 10px;
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.container li:hover{
+  background-color: #d3d3d3;
+}
