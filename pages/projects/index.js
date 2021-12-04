@@ -14,7 +14,6 @@ function ProjectsPage(props) {
 
 export async function getStaticProps() {
   const projects = await getAllProjects();
-  console.log(projects, "projects")
   const skills = [
     "HTML",
     "CSS",

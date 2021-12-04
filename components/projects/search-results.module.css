@@ -5,7 +5,7 @@
   position: absolute;
   min-height: 85px;
   width: 60%;
-  background-color: var(--card-backround);
+  background-color: var(--card-background);
   border: solid 1px var(--background);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
