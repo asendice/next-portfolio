@@ -1,3 +1,6 @@
 module.exports = {
-  reactStrictMode: true,
-}
+  reactStrictMode: false,
+  images: {
+    domains: ['dtravmysite.s3-us-west-1.amazonaws.com'],
+  },
+};

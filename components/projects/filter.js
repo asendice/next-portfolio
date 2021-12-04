@@ -2,31 +2,10 @@ import { useState, useEffect } from "react";
 import classes from "./filter.module.css";
 import SearchResults from "./search-results";
 
-const DUMMY_RESULTS = [
-  {
-    title: "project-1",
-    description: "this is project-1",
-    github: "link to ghb",
-    live: "link to live",
-  },
-  {
-    title: "project-2",
-    description: "this is project-2",
-    github: "link to ghb",
-    live: "link to live",
-  },
-  {
-    title: "project-3",
-    description: "this is project-3",
-    github: "link to ghb",
-    live: "link to live",
-  },
-];
-
 function Filter(props) {
   const [active, setActive] = useState(false);
 
-  const { skills, updateFilters, filters, searchTerm, setSearchTerm } = props;
+  const { skills, updateFilters, filters, searchTerm, setSearchTerm, projects } = props;
 
   useEffect(() => {
     if (searchTerm) {
@@ -42,7 +21,7 @@ function Filter(props) {
       <SearchResults
         active={active}
         setActive={setActive}
-        results={DUMMY_RESULTS}
+        results={projects}
       />
       <p>keywords to filter</p>
       <ul className={classes.list}>

@@ -12,7 +12,8 @@
   padding: 10px;
 }
 
-.container li {
+
+.item {
   display: flex;
   align-items: center;
   height: 40px;
@@ -20,6 +21,15 @@
   margin-bottom: 5px;
 }
 
-.container li:hover{
+.item:hover {
   background-color: #d3d3d3;
+}
+
+.item img {
+  width: 35px;
+  height: 35px;
+}
+
+.item p {
+  margin-left: 5px;
 }

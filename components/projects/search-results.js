@@ -34,16 +34,23 @@ function SearchResults(props) {
       id="search-results"
       ref={searchResultsRef}
     >
-      {results.map((result) => (
-        <li>
-          <Link href="/projects/">
-            <div>
-            <Image src="/" alt={result.tilte} height={20} width={20}/>
-            {result.title}
-            </div>
-          </Link>
-        </li>
-      ))}
+      {results.map((result) => {
+        return (
+          <li key={result.name}>
+            <Link href="/projects/">
+              <div className={classes.item}>
+                <img
+                  src={result.images[1]}
+                  alt={result.name}
+                  height={20}
+                  width={20}
+                />
+                <p>{result.name}</p>
+              </div>
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }
