@@ -1,0 +1,21 @@
+.item {
+  align-self: center;
+  min-height: 300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: solid 1px #333;
+
+}
+
+.item div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item img {
+  height: 200px;
+  width: 300px;
+}

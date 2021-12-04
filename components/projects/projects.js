@@ -9,7 +9,7 @@ function Projects(props) {
 
   const { projects } = props.projects;
 
-  console.log(projects);
+  console.log(projects, "projects");
 
   function updateFilters(filter) {
     if (!filters.includes(filter)) {
@@ -45,7 +45,7 @@ function Projects(props) {
         setSearchTerm={setSearchTerm}
         projects={filterProjects()}
       />
-      <ProjectList />
+      <ProjectList projects={projects} />
     </section>
   );
 }
