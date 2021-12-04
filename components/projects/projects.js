@@ -22,7 +22,7 @@ function Projects(props) {
     }
   }
 
-  function filterProjects() {
+  function filterSearchProjects() {
     const searchResults = projects.filter((project) => {
       if (
         project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -34,6 +34,17 @@ function Projects(props) {
     return searchResults;
   }
 
+  function filterProjects() {
+    const filteredProjects = projects.filter((project) => {
+      const doesInclude = filters.some((elmement) =>
+        project.skills.includes(elmement)
+      );
+      return doesInclude;
+    });
+    return filteredProjects;
+  }
+
+
   const { skills } = props;
   return (
     <section className={classes.projects}>
@@ -43,9 +54,11 @@ function Projects(props) {
         filters={filters}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        projects={filterProjects()}
+        projects={filterSearchProjects()}
       />
-      <ProjectList projects={projects} />
+      <ProjectList
+        projects={filters.length === 0 ? projects : filterProjects()}
+      />
     </section>
   );
 }
