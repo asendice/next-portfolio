@@ -25,6 +25,10 @@ function SearchResults(props) {
     };
   }, [active]);
 
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
+  };
+
   if (!active) {
     return <div></div>;
   }
@@ -39,11 +43,12 @@ function SearchResults(props) {
           <li key={result.name}>
             <Link href="/projects/">
               <div className={classes.item}>
-                <img
+                <Image
+                  loader={myLoader}
                   src={result.images[1]}
                   alt={result.name}
-                  height={20}
-                  width={20}
+                  height={40}
+                  width={50}
                 />
                 <p>{result.name}</p>
               </div>
