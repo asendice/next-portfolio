@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 800px;
+  height: 550px;
+}
+.imagecontainer {
+  left: 50px;
+  position: absolute;
+  transition: all ease 0.6s;
+  opacity: 0;
+}
+.image {
+  object-fit: contain;
+  align-self: center;
+}
+.active {
+  opacity: 1;
+}
+
+.arrow {
+  font-size: 3rem;
+  cursor: pointer;
+}
+.arrow:active{
+  opacity: 0.6;
+}

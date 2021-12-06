@@ -16,8 +16,6 @@ export async function getStaticProps(context) {
 
   const project = await getProjectByName(projectName);
 
-  console.log(project);
-
   return {
     props: {
       project: project,
