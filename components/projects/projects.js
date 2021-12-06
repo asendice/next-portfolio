@@ -9,8 +9,6 @@ function Projects(props) {
 
   const { projects } = props.projects;
 
-  console.log(projects, "projects");
-
   function updateFilters(filter) {
     if (!filters.includes(filter)) {
       setFilters((currentFilters) => [...currentFilters, filter]);

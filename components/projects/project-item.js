@@ -29,7 +29,7 @@ function ProjectItem(props) {
         </div>
       </div>
       <div className={classes.btns}>
-        <Button link={`/project/${name}`}> Learn More </Button>
+        <Button link={`/projects/${name}`}> Learn More </Button>
         <Button link={gitHub}>GitHub</Button>
         {live && <Button link={live}>Live Demo</Button>}
       </div>
