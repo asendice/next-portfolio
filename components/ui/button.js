@@ -6,7 +6,9 @@ function Button(props) {
   if (props.link) {
     return (
       <Link href={props.link}>
-        <a className={classes.btn}>{props.children}</a>
+        <a className={classes.btn} rel="noopener noreferrer" target="_blank">
+          {props.children}
+        </a>
       </Link>
     );
   }

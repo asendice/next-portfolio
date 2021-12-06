@@ -18,39 +18,24 @@ function ProjectItem(props) {
         </div>
         <div className={classes.text}>
           <h1>{name}</h1>
+          <ul>
+            {skills.map((skill) => (
+              <li key={skill}>
+                <p className={classes.skills}>{skill}</p>
+              </li>
+            ))}
+          </ul>
           <p>{description}</p>
         </div>
       </div>
       <div className={classes.btns}>
+        <Button link={`/project/${name}`}> Learn More </Button>
         <Button link={gitHub}>GitHub</Button>
         {live && <Button link={live}>Live Demo</Button>}
       </div>
     </li>
   );
-
-  // return (
-  //   <li className={classes.item}>
-  //     <Link href={`/projects/${name}`}>
-  //       <a>
-  //         <div>
-  //           <Image loader={myLoader} width={350} src={images[0]} height={250} />
-  //           <h1>{name}</h1>
-  //         </div>
-  //         <div className={classes.text}>
-  //           <ul>
-  //             {skills.map((skill) => (
-  //               <li key={skill}>{skill}</li>
-  //             ))}
-  //           </ul>
-  //         </div>
-  //       </a>
-  //     </Link>
-  //     <div className={classes.btns}>
-  //       <Button link={gitHub}>GitHub</Button>
-  //       {live && <Button link={live}>Live Demo</Button>}
-  //     </div>
-  //   </li>
-  // );
+ 
 }
 
 export default ProjectItem;

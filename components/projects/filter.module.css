@@ -6,6 +6,7 @@
   min-height: 120px;
   width: 90%;
   background-color: var(--card-background);
+  overflow-x: hidden;
 }
 .filter input {
   margin-top: 10px;
