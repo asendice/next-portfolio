@@ -41,7 +41,7 @@ function SearchResults(props) {
       {results.map((result) => {
         return (
           <li key={result.name}>
-            <Link href="/projects/">
+            <Link href={`/projects/${result.name}`}>
               <div className={classes.item}>
                 <Image
                   loader={myLoader}
