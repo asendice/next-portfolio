@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  padding-left: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav div:hover {
+  transform: translateY(-10px);
+}
+@media (max-width: 650px) {
+  .nav div {
+    width: 80px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
