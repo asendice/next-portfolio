@@ -22,6 +22,7 @@ function Filter(props) {
         active={active}
         setActive={setActive}
         results={projects}
+        searchTerm={searchTerm}
       />
       <p>keywords to filter</p>
       <ul className={classes.list}>

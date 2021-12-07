@@ -56,6 +56,7 @@ function Projects(props) {
       />
       <ProjectList
         projects={filters.length === 0 ? projects : filterProjects()}
+        filters={filters}
       />
     </section>
   );

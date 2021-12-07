@@ -4,7 +4,7 @@ import Image from "next/image";
 import classes from "./search-results.module.css";
 
 function SearchResults(props) {
-  const { results, active, setActive } = props;
+  const { results, active, setActive, searchTerm } = props;
 
   const searchResultsRef = useRef();
 
@@ -32,6 +32,17 @@ function SearchResults(props) {
   if (!active) {
     return <div></div>;
   }
+
+  if (active && results.length === 0){
+    return <ul className={classes.container}>
+      <li>
+        <div className={classes.item}>
+          <p>"{searchTerm}" found zero projects...</p>
+        </div>
+      </li>
+    </ul>
+  }
+
   return (
     <ul
       className={classes.container}
