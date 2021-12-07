@@ -28,34 +28,34 @@ function ProjectImages(props) {
 
   return (
     <div className={classes.container}>
-      <BsArrowLeftShort
-        className={classes.arrow}
-        onClick={() => onLeftArrowClick()}
-      />
       {images.map((img, index) => {
         return (
           <div
+            key={img}
             className={`${classes.imagecontainer} ${
               index === imgIndex ? classes.active : ""
             }`}
           >
+            <BsArrowLeftShort
+              className={classes.arrow}
+              onClick={() => onLeftArrowClick()}
+            />
+            <BsArrowRightShort
+              className={`${classes.arrow} ${classes.right}`}
+              onClick={() => onRightArrowClick()}
+            />
             <Image
               loader={myLoader}
               alt={img}
               src={img}
               key={index}
-              width={700}
+              width={800}
               height={550}
               className={classes.image}
             />
           </div>
         );
       })}
-      <BsArrowRightShort
-        className={classes.arrow}
-        onClick={() => onRightArrowClick()}
-      />
-      {/* <BsArrowRightShort className={classes.arrow} onClick={() => onRightArrowClick()} /> */}
     </div>
   );
 }

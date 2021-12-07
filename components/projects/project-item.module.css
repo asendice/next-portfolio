@@ -45,7 +45,7 @@
 }
 
 .skills {
-  color: #5388c1;
+  color: var(--skillblue);
 }
 
 .text h1 p {
