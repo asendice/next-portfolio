@@ -15,8 +15,8 @@
   align-items: center;
   transition: all ease 0.6s;
   opacity: 0;
-  
-}
+  border: solid 1px #333;
+ }
 .image {
   object-fit: contain;
 }

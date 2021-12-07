@@ -38,6 +38,11 @@
 .nav div:hover {
   transform: translateY(-10px);
 }
+
+.nav div:active {
+  opacity: 0.6
+}
+
 @media (max-width: 650px) {
   .nav div {
     width: 80px;
