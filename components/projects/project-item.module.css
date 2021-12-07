@@ -39,6 +39,10 @@
 
 .text h1 {
   font-size: 2rem;
+  cursor: pointer;
+}
+.text h1:hover{
+  text-decoration: underline;
 }
 
 .skills {

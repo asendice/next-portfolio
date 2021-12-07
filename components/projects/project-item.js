@@ -17,7 +17,9 @@ function ProjectItem(props) {
           <Image loader={myLoader} width={350} src={images[0]} height={220} />
         </div>
         <div className={classes.text}>
-          <h1>{name}</h1>
+          <Link href={`/projects/${name}`}>
+            <h1>{name}</h1>
+          </Link>
           <ul>
             {skills.map((skill) => (
               <li key={skill}>
@@ -35,7 +37,6 @@ function ProjectItem(props) {
       </div>
     </li>
   );
- 
 }
 
 export default ProjectItem;
