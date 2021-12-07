@@ -9,7 +9,7 @@ function ProjectMain(props) {
       <h1>{name}</h1>
       <ul className={classes.list}>
         {skills.map((skill) => (
-          <p>{skill}</p>
+          <p key={skill}>{skill}</p>
         ))}
       </ul>
       <div className={classes.btns}>
