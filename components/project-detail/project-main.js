@@ -2,7 +2,8 @@ import Button from "../ui/button";
 import classes from "./project-main.module.css";
 
 function ProjectMain(props) {
-  const { name, skills, live, gHub } = props;
+  const { name, skills, live, gitHub } = props;
+
 
   return (
     <div className={classes.container}>
@@ -13,8 +14,8 @@ function ProjectMain(props) {
         ))}
       </ul>
       <div className={classes.btns}>
-        <Button>GitHub</Button>
-        <Button>Live Demo</Button>
+        <Button link={gitHub}>GitHub</Button>
+        {live && <Button link={live}>Live Demo</Button>}
       </div>
     </div>
   );
