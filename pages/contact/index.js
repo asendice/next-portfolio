@@ -7,7 +7,7 @@ function ContactPage(props) {
   return (
     <Fragment>
       <ContactInfo name={name} email={email} mobile={mobile} />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </Fragment>
   );
 }
