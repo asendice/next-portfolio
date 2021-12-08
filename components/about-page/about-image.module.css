@@ -1,0 +1,67 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 410px;
+  width: 410px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.image {
+  position: relative;
+  object-fit: contain;
+  border-radius: 30px;
+}
+
+.div1 {
+  display: block;
+  height: 43%;
+  width: 100%;
+  background: linear-gradient(#e4324c, #ff7360);
+  margin-bottom: 7px;
+}
+
+.div2 {
+  display: block;
+  width: 100%;
+  height: 4%;
+  background: linear-gradient(#ff7a57, #ff7d50);
+  margin-bottom: 8px;
+}
+.div3 {
+  display: block;
+  width: 100%;
+  height: 4%;
+  background: linear-gradient(#ff7a57, #ff7d50);
+  margin-bottom: 10px;
+}
+
+.div4 {
+  display: block;
+  width: 100%;
+  height: 7%;
+  background: linear-gradient(#ff8639, #ff8a32);
+  margin-bottom: 14px;
+}
+.div5 {
+  display: block;
+  width: 100%;
+  height: 8%;
+  background: linear-gradient(#ff8639, #ff8a32);
+  margin-bottom: 16px;
+}
+
+.div6 {
+  display: block;
+  width: 100%;
+  height: 85px;
+  background: linear-gradient(#ff9121, #fc7223);
+}
