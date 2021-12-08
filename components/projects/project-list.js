@@ -4,12 +4,19 @@ import classes from "./project-list.module.css";
 function ProjectList(props) {
   const { projects, filters } = props;
 
-  if(projects.length === 0){
+  if (projects.length === 0) {
     return (
       <div className={classes.noresult}>
-        No results matched "{filters.map(filter => <p>{filter}</p>)}"
+        <h1>No results found for</h1>
+        <div>
+        "
+          {filters.map((filter) => (
+            <p>{filter}</p>
+          ))}
+          "
+        </div>
       </div>
-    )
+    );
   }
 
   return (

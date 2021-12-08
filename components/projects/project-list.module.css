@@ -8,7 +8,11 @@
 }
 
 .noresult {
+  width: 90%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 25px;
   font-size: 1.5rem;
 }
@@ -16,4 +20,8 @@
 .noresult p {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+.noresult div {
+  display: flex;
 }
