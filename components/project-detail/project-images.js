@@ -36,14 +36,18 @@ function ProjectImages(props) {
               index === imgIndex ? classes.active : ""
             }`}
           >
-            <BsArrowLeftShort
+            <button
               className={classes.arrow}
               onClick={() => onLeftArrowClick()}
-            />
-            <BsArrowRightShort
+            >
+              <BsArrowLeftShort />
+            </button>
+            <button
               className={`${classes.arrow} ${classes.right}`}
               onClick={() => onRightArrowClick()}
-            />
+            >
+              <BsArrowRightShort />
+            </button>
             <Image
               loader={myLoader}
               alt={img}
