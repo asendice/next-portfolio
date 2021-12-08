@@ -34,7 +34,7 @@ function Projects(props) {
 
   function filterProjects() {
     const filteredProjects = projects.filter((project) => {
-      const doesInclude = filters.some((elmement) =>
+      const doesInclude = filters.every((elmement) =>
         project.skills.includes(elmement)
       );
       return doesInclude;
