@@ -5,7 +5,6 @@ import classes from "./project.module.css";
 
 function Project(props) {
   const { name, images, skills, description, live, gitHub } = props.project;
-  console.log(props);
 
   return (
     <div className={classes.container}>
