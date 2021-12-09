@@ -4,13 +4,14 @@ import classes from "./project-main.module.css";
 function ProjectMain(props) {
   const { name, skills, live, gitHub } = props;
 
-
   return (
     <div className={classes.container}>
       <h1>{name}</h1>
       <ul className={classes.list}>
         {skills.map((skill) => (
-          <p key={skill}>{skill}</p>
+          <li key={skill}>
+            <p>{skill}</p>
+          </li>
         ))}
       </ul>
       <div className={classes.btns}>

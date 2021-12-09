@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans&family=Roboto+Mono:wght@400&display=swap");
 * {
   box-sizing: border-box;
-  /* --project-background: #646669;
-  --card-background: #fff;
-  --background: #101111; */
+  /* --project-background: #646669; */
+  /* --card-background: #fff; */
+  --dark: #101111;
   --grey: #333;
   --card-background: #fff;
   --background: #fff;
