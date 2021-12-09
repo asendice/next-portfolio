@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 function ProjectItem(props) {
-  const { name, images, skills, description, gitHub, live } = props.project;
+  const { name, images, skills, excerpt, gitHub, live } = props.project;
 
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
@@ -14,12 +14,13 @@ function ProjectItem(props) {
     <li className={classes.item}>
       <div className={classes.left}>
         <div className={classes.image}>
-          <Image loader={myLoader} width={350} src={images[0]} height={220} />
+          <Image loader={myLoader} width={380} src={images[0]} height={220} />
         </div>
         <div className={classes.text}>
           <Link href={`/projects/${name}`}>
             <h1>{name}</h1>
           </Link>
+          <p>{excerpt}</p>
           <ul>
             {skills.map((skill) => (
               <li key={skill}>
@@ -27,7 +28,6 @@ function ProjectItem(props) {
               </li>
             ))}
           </ul>
-          <p>{description}</p>
         </div>
       </div>
       <div className={classes.btns}>
