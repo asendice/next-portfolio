@@ -1,0 +1,41 @@
+.section {
+  margin-top: 20px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
+}
+
+.container {
+  width: 95%;
+  height: 90%;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+.actions {
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width: 1165px){
+
+  .section {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 705px) {
+  .section {
+    margin-top: 100px;
+  }
+}

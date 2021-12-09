@@ -1,16 +1,16 @@
 import { Fragment } from "react";
-import AboutImage from "../../components/about-page/about-image";
-import AboutText from "../../components/about-page/about-text";
+import About from "../../components/about-page/about";
 import { getAboutMe } from "../../helpers/api-util";
 
 function AboutPage(props) {
-  const { about, hero } = props;
+  const { about } = props;
+
+  const text = about.aboutme[0].aboutText;
 
   return (
     <Fragment>
-      <h1>about-page</h1>
-      <AboutImage />
-       {/* <AboutText /> */}
+      <About text={text} />
+
     </Fragment>
   );
 }
@@ -21,8 +21,6 @@ export async function getStaticProps() {
   return {
     props: {
       about: aboutme,
-      // about: aboutme.aboutText,
-      // hero: aboutme.heroText,
     },
   };
 }

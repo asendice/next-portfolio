@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   position: absolute;
   height: 410px;
   width: 410px;
@@ -18,7 +20,7 @@
 .image {
   position: relative;
   object-fit: contain;
-  border-radius: 30px;
+  border-radius: 10%;
 }
 
 .div1 {
@@ -26,13 +28,13 @@
   height: 43%;
   width: 100%;
   background: linear-gradient(#e4324c, #ff7360);
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .div2 {
   display: block;
   width: 100%;
-  height: 4%;
+  height: 3%;
   background: linear-gradient(#ff7a57, #ff7d50);
   margin-bottom: 8px;
 }
@@ -62,6 +64,27 @@
 .div6 {
   display: block;
   width: 100%;
-  height: 85px;
+  height: 90px;
   background: linear-gradient(#ff9121, #fc7223);
+}
+
+@media (max-width: 1165px) {
+  .section {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 705px) {
+  .container {
+    height: 350px;
+    width: 350px;
+  }
+}
+@media (max-width: 500px) {
+  .section {
+    margin-top: 100px;
+  }
+  .container {
+    height: 280px;
+    width: 280px;
+  }
 }
