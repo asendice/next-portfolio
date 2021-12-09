@@ -14,12 +14,10 @@ function ContactForm() {
       email: nameRef.current.value,
       message: messageRef.current.value,
     };
-    console.log(submission, "sub");
   }
 
   return (
     <div className={classes.container}>
-      <h1>Let's Connect!</h1>
       <form onSubmit={(e) => onSubmitHandler(e)}>
         <label htmlFor="name">name</label>
         <input type="text" id="name" name="name" ref={nameRef} />
@@ -37,7 +35,7 @@ function ContactForm() {
         />
 
         <div className={classes.btncontainer}>
-          <Button>Submit</Button>
+          <Button>submit</Button>
         </div>
       </form>
     </div>
