@@ -17,6 +17,8 @@ function ProjectItem(props) {
         <Image
           loading="eager"
           priority={true}
+          placeholder="blur"
+          blurDataURL="blur"
           loader={myLoader}
           width={500}
           src={images[0]}

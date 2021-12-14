@@ -33,14 +33,16 @@ function SearchResults(props) {
     return <div></div>;
   }
 
-  if (active && results.length === 0){
-    return <ul className={classes.container}>
-      <li>
-        <div className={classes.item}>
-          <p>"{searchTerm}" found zero projects...</p>
-        </div>
-      </li>
-    </ul>
+  if (active && results.length === 0) {
+    return (
+      <ul className={classes.container}>
+        <li>
+          <div className={classes.item}>
+            <p>"{searchTerm}" found zero projects...</p>
+          </div>
+        </li>
+      </ul>
+    );
   }
 
   return (
@@ -57,6 +59,8 @@ function SearchResults(props) {
                 <Image
                   loading="eager"
                   priority={true}
+                  placeholder="blur"
+                  blurDataURL="blur"
                   loader={myLoader}
                   src={result.images[1]}
                   alt={result.name}
