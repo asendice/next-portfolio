@@ -2,6 +2,7 @@ import Button from "../ui/button";
 import classes from "./project-item.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
 
 function ProjectItem(props) {
   const { name, images, skills, excerpt, gitHub, live } = props.project;
@@ -13,7 +14,14 @@ function ProjectItem(props) {
   return (
     <li className={classes.item}>
       <div className={classes.image}>
-        <Image loading="eager" priority={true} loader={myLoader} width={380} src={images[0]} height={220} />
+        <Image
+          loading="eager"
+          priority={true}
+          loader={myLoader}
+          width={500}
+          src={images[0]}
+          height={300}
+        />
       </div>
       <div className={classes.text}>
         <Link href={`/projects/${name}`}>
@@ -27,16 +35,21 @@ function ProjectItem(props) {
             </li>
           ))}
         </ul>
+        <Link href={`/projects/${name}`}>
+          <a className={classes.learnMore}>
+            Learn More
+            <span>
+              <BsArrowRight />
+            </span>
+          </a>
+        </Link>
         <div className={classes.btns}>
-          <Button link={`/projects/${name}`}> Learn More </Button>
           <Button link={gitHub}>GitHub</Button>
           {live && <Button link={live}>Live Demo</Button>}
         </div>
       </div>
     </li>
   );
-
-
 }
 
 export default ProjectItem;

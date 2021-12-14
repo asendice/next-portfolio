@@ -55,6 +55,8 @@ function SearchResults(props) {
             <Link href={`/projects/${result.name}`}>
               <div className={classes.item}>
                 <Image
+                  loading="eager"
+                  priority={true}
                   loader={myLoader}
                   src={result.images[1]}
                   alt={result.name}
