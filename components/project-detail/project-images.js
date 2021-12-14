@@ -28,38 +28,35 @@ function ProjectImages(props) {
 
   return (
     <div className={classes.container}>
-      {images.map((img, index) => {
-        return (
-          <div
-            key={img}
-            className={`${classes.imagecontainer} ${
-              index === imgIndex ? classes.active : ""
-            }`}
-          >
-            <button
-              className={classes.arrow}
-              onClick={() => onLeftArrowClick()}
-            >
-              <BsArrowLeftShort />
-            </button>
-            <button
-              className={`${classes.arrow} ${classes.right}`}
-              onClick={() => onRightArrowClick()}
-            >
-              <BsArrowRightShort />
-            </button>
-            <Image
-              loader={myLoader}
-              alt={img}
-              src={img}
-              key={index}
-              width={800}
-              height={550}
-              className={classes.image}
-            />
-          </div>
-        );
-      })}
+      <button className={classes.arrow} onClick={() => onLeftArrowClick()}>
+        <BsArrowLeftShort />
+      </button>
+      <button
+        className={`${classes.arrow} ${classes.right}`}
+        onClick={() => onRightArrowClick()}
+      >
+        <BsArrowRightShort />
+      </button>
+      {images.map((img, index) => (
+        <div
+          key={img}
+          className={`${classes.imagecontainer} ${
+            index === imgIndex ? classes.active : ""
+          }`}
+        >
+          <Image
+            loading="eager"
+            priority={true}
+            className={classes.image}
+            loader={myLoader}
+            alt={img}
+            src={img}
+            key={index}
+            width={900}
+            height={650}
+          />
+        </div>
+      ))}
     </div>
   );
 }

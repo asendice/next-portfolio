@@ -13,7 +13,7 @@ function ProjectItem(props) {
   return (
     <li className={classes.item}>
       <div className={classes.image}>
-        <Image loader={myLoader} width={380} src={images[0]} height={220} />
+        <Image loading="eager" priority={true} loader={myLoader} width={380} src={images[0]} height={220} />
       </div>
       <div className={classes.text}>
         <Link href={`/projects/${name}`}>

@@ -8,10 +8,8 @@ function Project(props) {
 
   return (
     <div className={classes.container}>
-      <div className={classes.main}>
-        <ProjectImages images={images} />
-        <ProjectMain name={name} skills={skills} live={live} gitHub={gitHub} />
-      </div>
+      <ProjectImages images={images} />
+      <ProjectMain name={name} skills={skills} live={live} gitHub={gitHub} />
       <ProjectText text={description} />
     </div>
   );
