@@ -17,7 +17,7 @@ function Filter(props) {
 
   return (
     <div className={classes.filter}>
-      <input placeholder="" onChange={(e) => setSearchTerm(e.target.value)} />
+      <input placeholder="search" onChange={(e) => setSearchTerm(e.target.value)} />
       <SearchResults
         active={active}
         setActive={setActive}
