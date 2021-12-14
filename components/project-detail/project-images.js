@@ -6,6 +6,8 @@ import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 function ProjectImages(props) {
   const [imgIndex, setImgIndex] = useState(0);
 
+  console.log(imgIndex, "imgIndex");
+
   const { images } = props;
 
   function onRightArrowClick() {
@@ -28,35 +30,42 @@ function ProjectImages(props) {
 
   return (
     <div className={classes.container}>
-      <button className={classes.arrow} onClick={() => onLeftArrowClick()}>
+      <button
+        className={`${classes.arrow} ${classes.left}`}
+        onClick={() => onLeftArrowClick()}
+      >
         <BsArrowLeftShort />
       </button>
+
+      {images.map((img, index) => {
+        console.log(index, "index");
+        return (
+          <div
+            key={img}
+            className={`${classes.imagecontainer} ${
+              index === imgIndex ? classes.active : ""
+            }`}
+          >
+            <Image
+              loading="eager"
+              priority={true}
+              className={classes.image}
+              loader={myLoader}
+              alt={img}
+              src={img}
+              key={index}
+              width={900}
+              height={650}
+            />
+          </div>
+        );
+      })}
       <button
         className={`${classes.arrow} ${classes.right}`}
         onClick={() => onRightArrowClick()}
       >
         <BsArrowRightShort />
       </button>
-      {images.map((img, index) => (
-        <div
-          key={img}
-          className={`${classes.imagecontainer} ${
-            index === imgIndex ? classes.active : ""
-          }`}
-        >
-          <Image
-            loading="eager"
-            priority={true}
-            className={classes.image}
-            loader={myLoader}
-            alt={img}
-            src={img}
-            key={index}
-            width={900}
-            height={650}
-          />
-        </div>
-      ))}
     </div>
   );
 }

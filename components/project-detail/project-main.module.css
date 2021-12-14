@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   min-width: 280px;
 }
 .container h1 {
@@ -13,7 +14,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  width: 250px;
 }
 .list p {
   color: var(--skillblue);
