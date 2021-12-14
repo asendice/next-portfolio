@@ -7,7 +7,7 @@ import classes from "./hero.module.css"
 function Hero(props) {
   return (
     <section className={classes.hero}>
-      <h1>Dylan Travis</h1>
+      <h1 className={classes.typewriter}>Dylan Travis</h1>
       <CardGrid items={props.items} />
       <Socials />
     </section>

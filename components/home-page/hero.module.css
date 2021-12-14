@@ -6,6 +6,45 @@
   min-height: 90vh;
 }
 
-.hero h1 {
+
+.typewriter {
   font-size: 1.8rem;
+  position: relative;
+}
+.typewriter::before,
+.typewriter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.typewriter::before {
+  content: "";
+  background-color: #fff;
+  animation: type 3s steps(12, end) 1s forwards;
+}
+
+.typewriter::after{
+  content: "";
+  background-color: black;
+  width: 2px;
+  animation: type 3s steps(12, end) 1s forwards, pulse .8s infinite;
+}
+
+@keyframes type {
+  to {
+    left: 100%
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

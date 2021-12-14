@@ -12,7 +12,7 @@ function AboutImage() {
         <div className={classes.div5}> </div>
         <div className={classes.div6}> </div>
       </div>
-        <Image loading="eager" priority={true} placeholder="blur" blurDataURL="blur" src="/images/avatar.png" width={300} height={300} className={classes.image} />
+        <Image loading="eager" priority={true} src="/images/avatar.jpeg" width={300} height={300} className={classes.image} />
     </section>
   );
 }
